@@ -1,0 +1,41 @@
+{
+  "name": "tutormatchapp",
+  "version": "1.0.0",
+  "description": "MERN stack application that helps students get the academic help they need",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "postinstall": "cd client && npm install && npm run build",
+    "start": "node server.js",
+    "dev": "prettier --write . && NODE_ENV=development nodemon server.js",
+    "initDB": "mongoimport -d TutorsApp -c tutors --jsonArray --file ./db/data/tutors2.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yianan261/Tutor-Match-App.git"
+  },
+  "keywords": [],
+  "author": "Amanda Au-Yeung,Yian Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yianan261/Tutor-Match-App/issues"
+  },
+  "homepage": "https://github.com/yianan261/Tutor-Match-App#readme",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "cloudinary": "^1.32.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.11.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  }
+}
